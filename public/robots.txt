@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.webcrafty.in/sitemap.xml
+Host: https://www.webcrafty.in
