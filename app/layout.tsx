@@ -6,8 +6,9 @@ import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Toaster } from "react-hot-toast"
 import { PageTransition } from "@/components/ui/page-transition"
-import Script from "next/script";
-import Analytics from "@/components/analytics"; // client component (below)
+import Script from "next/script"
+
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -69,9 +70,6 @@ export const metadata: Metadata = {
     },
   },
 };
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // optional
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
-
 
 export default function RootLayout({
   children,
@@ -81,52 +79,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* If you want to add GA directly (not via GTM), include gtag script.
-            But DO NOT use both GTM and direct GA simultaneously unless you know what you're doing. */}
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', { send_page_view: false }); // we'll push pageviews manually
-              `}
-            </Script>
-          </>
-        )}
+      {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y84VXKXNFP"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y84VXKXNFP');
+          `
+        }} />
       </head>
       <body className={inter.className}>
-                {/* GTM Head script (recommended inside head, but placing right after body open is fine too) */}
-        {GTM_ID && (
-          <Script id="gtm-init" strategy="afterInteractive">
-            {`
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0], j=d.createElement(s);
-                j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `}
-          </Script>
-        )}
 
-        {/* noscript iframe for GTM (put immediately after opening <body>) */}
-        {GTM_ID && (
-          <noscript
-            // React needs dangerouslySetInnerHTML to render raw iframe inside noscript
-            dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-            }}
-          />
-        )}
         <Header />
-        <Analytics />
         <PageTransition>
           <main>{children}</main>
         </PageTransition>
