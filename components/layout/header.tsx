@@ -29,7 +29,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
                 <Image
                 src={logo}
-                alt="WebCrafty Solution"
+                alt="WebCrafty Solution in Vapi"
                 width={200}
                 priority
                 className=""

@@ -33,8 +33,6 @@ import Lottie from 'react-lottie-player'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* TESTING FEATURES */}
-      {/* TESTING FEATURES */}
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/5 py-20 lg:py-32" id="hero" data-section-id="hero">
         <div className="container mx-auto px-4">
@@ -90,7 +88,7 @@ export default function HomePage() {
             <div className="relative">
               <Image
                 src={about1}
-                alt="Our Team"
+                alt="Our Expert Web Team in Vapi-WebCrafty Solution"
                 width={500}
                 height={400}
                 className=""
@@ -249,7 +247,8 @@ export default function HomePage() {
             {[
               {
                 id: 1,
-                title: "10 Essential Web Development Trends for 2024",
+                title: "Web Development Trends 2024",
+                alt: "Web Development Trends 2024 – Daman",
                 excerpt:
                   "Discover the latest trends shaping the future of web development, from AI integration to progressive web apps.",
                 category: "Web Development",
@@ -260,7 +259,8 @@ export default function HomePage() {
               },
               {
                 id: 2,
-                title: "How to Increase Your ROI with Google Ads",
+                title: "Increase ROI with Google Ads ",
+                alt: "Web Development Trends 2024 – Daman",
                 excerpt:
                   "Learn proven strategies to optimize your Google Ads campaigns and maximize your return on investment.",
                 category: "Digital Marketing",
@@ -271,7 +271,8 @@ export default function HomePage() {
               },
               {
                 id: 3,
-                title: "Mobile App Design: Best Practices for 2024",
+                title: "Mobile App Design – 2024 Best Practices",
+                alt: "Mobile App Design in Udvada – 2024 Best Practices",
                 excerpt:
                   "Explore the latest mobile app design trends and best practices to create engaging user experiences.",
                 category: "App Development",
@@ -288,7 +289,7 @@ export default function HomePage() {
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={post.image || "/placeholder.svg"}
-                    alt={post.title}
+                    alt={post.alt}
                     width={500}
                     height={300}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -394,7 +395,8 @@ export default function HomePage() {
             {[
               {
                 id: 1,
-                title: "Fashion Forward E-commerce",
+                title: "Fashion Forward E-commerce in Vapi",
+                alt:"",
                 client: "Fashion Forward Inc.",
                 result: "400% increase in online sales",
                 image: csh1,
@@ -403,6 +405,7 @@ export default function HomePage() {
               {
                 id: 2,
                 title: "FitLife Wellness App",
+                alt:"",
                 client: "FitLife Wellness",
                 result: "50K+ app downloads in 3 months",
                 image: "/placeholder.svg?height=300&width=400",

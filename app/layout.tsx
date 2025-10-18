@@ -7,6 +7,7 @@ import Footer from "@/components/layout/footer"
 import { Toaster } from "react-hot-toast"
 import { PageTransition } from "@/components/ui/page-transition"
 import Script from "next/script"
+import TopAlertBar from "@/components/TopAlertBar"
 
 
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.webcrafty.in"),
   title: "WebCrafty Solution - Digital Marketing & Development Agency",
   description:
-    "Full-service digital marketing and development agency specializing in website development, app development, digital marketing, graphics design, and more.",
+    "Full-service digital marketing and development agency specializing in website development, app development, digital marketing, graphics design etc.",
   keywords: [
     "web development",
     "app development",
@@ -91,7 +92,7 @@ export default function RootLayout({
         }} />
       </head>
       <body className={inter.className}>
-
+  <TopAlertBar />
         <Header />
         <PageTransition>
           <main>{children}</main>

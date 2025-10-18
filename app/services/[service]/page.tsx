@@ -400,7 +400,8 @@ export default function ServicePage({ params }: { params: { service: string } })
             {serviceData.technologies.map((tech, index) => (
               <Badge
                 key={index}
-                className="text-base py-2 px-4 bg-white shadow-sm border border-border hover:bg-primary/10 transition-colors"
+                variant="outline"
+                className="text-base py-2 px-4 hover:bg-primary hover:text-white transition-colors cursor-pointer"
               >
                 {tech}
               </Badge>
