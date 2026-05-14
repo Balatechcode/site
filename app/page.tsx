@@ -22,11 +22,13 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import SocialMediaInfluencer from '@/public/Social Media Influencer.json'
-import about1 from '@/public/placeholder.svg';
+import about1 from '@/public/img.png';
 import blog1 from '@/public/blog1.webp';
 import blog2 from '@/public/blog2.jpg';
 import blog3 from '@/public/blog3.jpg';
 import csh1 from '@/public/csh1.png';
+import csh2 from '@/public/csh2.png';
+import csh3 from '@/public/csh3.png';
 import Lottie from 'react-lottie-player'
 
 
@@ -387,16 +389,23 @@ export default function HomePage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">Portfolio</Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Featured Case Studies</h2>
-            <p className="text-xl text-muted-foreground">Real results for real businesses</p>
+            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+              Portfolio
+            </Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Real results for real businesses
+            </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12">
+
+          {/* 3 cards in one row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 id: 1,
                 title: "Fashion Forward E-commerce in Vapi",
-                alt:"",
                 client: "Fashion Forward Inc.",
                 result: "400% increase in online sales",
                 image: csh1,
@@ -404,28 +413,36 @@ export default function HomePage() {
               },
               {
                 id: 2,
-                title: "FitLife Wellness App",
-                alt:"",
-                client: "FitLife Wellness",
-                result: "50K+ app downloads in 3 months",
-                image: "/placeholder.svg?height=300&width=400",
-                tags: ["React Native", "UI/UX", "App Store"],
+                title: "Real State construction",
+                client: "Real State Schandra",
+                result: "Click rate 100%",
+                image: csh2, 
+                tags: ["php", "UI/UX", "MySql"],
+              },
+              {
+                id: 3,
+                title: "Business Growth Platform",
+                client: "Growth Solutions",
+                result: "300% increase in leads",
+                image: csh3, 
+                tags: ["Web Development", "SEO", "Marketing"],
               },
             ].map((study, index) => (
               <Card
                 key={index}
                 className="overflow-hidden group hover:shadow-xl transition-all duration-300 card-hover"
               >
-                <div className="relative">
+                {/* 2:1 Image Ratio */}
+                <div className="relative aspect-[2/1] overflow-hidden">
                   <Image
                     src={study.image || "/placeholder.svg"}
                     alt={study.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
+
                 <CardContent className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
                     {study.tags.map((tag, idx) => (
@@ -434,9 +451,11 @@ export default function HomePage() {
                       </Badge>
                     ))}
                   </div>
+
                   <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
                   <p className="text-muted-foreground mb-2">{study.client}</p>
                   <p className="text-primary font-semibold mb-4">{study.result}</p>
+
                   <Link href={`/portfolio/${study.id}`}>
                     <Button className="w-full bg-primary hover:bg-primary/90">
                       View Case Study

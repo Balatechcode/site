@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast"
 import { PageTransition } from "@/components/ui/page-transition"
 import Script from "next/script"
 import TopAlertBar from "@/components/TopAlertBar"
+import FloatingContactWidget from "@/components/FloatingContactWidget"
 
 
 
@@ -98,6 +99,7 @@ export default function RootLayout({
           <main>{children}</main>
         </PageTransition>
         <Footer />
+        <FloatingContactWidget />
         <Toaster
           position="top-right"
           toastOptions={{

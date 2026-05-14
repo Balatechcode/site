@@ -12,7 +12,7 @@ export default function ServicesPage() {
       title: "App Development",
       description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
       icon: <Smartphone className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img1.png?height=300&width=600",
       features: [
         "iOS & Android Native Apps",
         "Cross-Platform Development",
@@ -27,7 +27,7 @@ export default function ServicesPage() {
       title: "Website Development",
       description: "Custom websites and e-commerce platforms tailored to your business needs.",
       icon: <Globe className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img4.png?height=300&width=600",
       features: [
         "WordPress Development",
         "Shopify E-commerce",
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       title: "Graphics Designing",
       description: "Eye-catching visual designs that strengthen your brand identity and messaging.",
       icon: <Palette className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img3.png?height=300&width=600",
       features: [
         "Logo Design",
         "Brand Identity",
@@ -57,7 +57,7 @@ export default function ServicesPage() {
       title: "Software Development",
       description: "Custom software solutions to streamline your business operations and processes.",
       icon: <Code className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img2.png?height=300&width=600",
       features: [
         "Custom ERP Solutions",
         "CRM Development",
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       title: "Digital Marketing",
       description: "Strategic marketing campaigns that drive traffic, engagement, and conversions.",
       icon: <TrendingUp className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img5.png?height=300&width=600",
       features: [
         "Social Media Marketing",
         "Google & Meta Ads",
@@ -87,7 +87,7 @@ export default function ServicesPage() {
       title: "Video Editing",
       description: "Professional video content that captivates your audience and tells your story.",
       icon: <Video className="h-8 w-8" />,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/service_images/s_img6.png?height=300&width=600",
       features: [
         "Promo Videos",
         "Social Media Reels",
