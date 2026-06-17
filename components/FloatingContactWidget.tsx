@@ -80,7 +80,7 @@ export default function FloatingContactWidget() {
 
           {/* Email */}
           <Link
-            href="mailto:adtech8154@gmail.com"
+            href="mailto:info@webcraftysolution.com"
             className="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg"
           >
             <Mail size={22} />

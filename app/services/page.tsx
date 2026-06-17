@@ -1,9 +1,16 @@
+import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Globe, Smartphone, Palette, Code, TrendingUp, Video } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Our Digital Services -- Web, App, SEO & Marketing | WebCrafty Solution Vapi",
+  description:
+    "Explore WebCrafty Solution's full range of digital services: website development, mobile app development, SEO, digital marketing, graphic design & software solutions. Based in Vapi, Gujarat.",
+}
 
 export default function ServicesPage() {
   const services = [
@@ -106,7 +113,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">Our Services</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Comprehensive Digital Solutions</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Comprehensive Digital Services -- From Web Development to Marketing in Vapi, India</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               From concept to execution, we provide end-to-end digital services to help your business thrive in the
               digital landscape.

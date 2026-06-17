@@ -23,9 +23,15 @@ export default function Footer() {
               transformation partner.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Instagram, Twitter, Linkedin, Youtube].map((Icon, index) => (
-                <Link key={index} href="#" className="bg-white/10 p-2 rounded-lg hover:bg-primary transition-colors">
-                  <Icon className="h-5 w-5" />
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61572896502937" },
+                { Icon: Instagram, href: "https://www.instagram.com/webcrafty_/" },
+                { Icon: Twitter, href: "https://twitter.com/webcrafty_" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Youtube, href: "https://www.youtube.com/@ZeroToCoderi" }
+              ].map((social, index) => (
+                <Link key={index} href={social.href} className="bg-white/10 p-2 rounded-lg hover:bg-primary transition-colors">
+                  <social.Icon className="h-5 w-5" />
                 </Link>
               ))}
             </div>
@@ -36,16 +42,16 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2 text-gray-300">
               {[
-                "Website Development",
-                "App Development",
-                "Digital Marketing",
-                "Graphics Design",
-                "Software Development",
-                "Video Editing",
+                { name: "Website Development", href: "/services/website-development" },
+                { name: "App Development", href: "/services/app-development" },
+                { name: "Digital Marketing", href: "/services/digital-marketing" },
+                { name: "Graphics Design", href: "/services/graphic-design-services-india" },
+                { name: "Software Development", href: "/services/software-development" },
+                { name: "Video Editing", href: "/services/video-editing" },
               ].map((service, index) => (
                 <li key={index}>
-                  <Link href="/services" className="hover:text-primary transition-colors">
-                    {service}
+                  <Link href={service.href} className="hover:text-primary transition-colors">
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -83,11 +89,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 81549 54408</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>123 Business Ave, Suite 100</span>
+                <span>Vapi, Gujarat, India 396191</span>
               </div>
             </div>
 

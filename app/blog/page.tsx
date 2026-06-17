@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -5,6 +6,12 @@ import { Input } from "@/components/ui/input"
 import { Search, Calendar, User, ArrowRight, TrendingUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Digital Marketing & Web Development Blog | WebCrafty Solution Insights",
+  description:
+    "Explore expert insights, tips, and trends in digital marketing, web development, SEO, and app development on the WebCrafty Solution blog. Updated regularly.",
+}
 
 export default function BlogPage() {
   const categories = [
@@ -99,7 +106,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">Our Blog</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Insights & Updates</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">WebCrafty Insights -- Digital Marketing & Web Development Tips for Indian Businesses</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Stay updated with the latest trends, tips, and insights from the world of digital marketing and web
               development.

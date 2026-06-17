@@ -5,6 +5,54 @@ import { CheckCircle, ArrowRight, Globe, Smartphone, Palette, Code, TrendingUp, 
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { Metadata } from "next"
+
+// Per-service SEO metadata
+const serviceSEO: Record<string, { title: string; description: string }> = {
+  "website-development": {
+    title: "Web Development Company in Vapi, India | WordPress, Shopify & MERN Stack",
+    description:
+      "WebCrafty Solution offers professional web development services in Vapi, Gujarat -- WordPress, Shopify, MERN Stack, PHP & more. Fast, SEO-optimized, responsive websites. Free consultation!",
+  },
+  "app-development": {
+    title: "Mobile App Development Company in Vapi, India | iOS & Android Apps",
+    description:
+      "Build powerful iOS and Android apps with WebCrafty Solution, a leading app development company in Vapi, Gujarat. We specialize in React Native & Flutter. Get a free project estimate!",
+  },
+  "digital-marketing": {
+    title: "Digital Marketing Agency in Vapi, Gujarat -- SEO, PPC & Social Media",
+    description:
+      "Grow your business with WebCrafty Solution's digital marketing services in Vapi, Gujarat. Expert SEO, Google Ads, Meta Ads, and social media marketing. Request a free audit today!",
+  },
+  "graphics-designing": {
+    title: "Graphic Design Services in Vapi, Gujarat | Logo, Branding & Social Media",
+    description:
+      "Professional graphic design services by WebCrafty Solution in Vapi, Gujarat. Logo design, brand identity, social media creatives & more. Get a free design consultation!",
+  },
+  "software-development": {
+    title: "Custom Software Development Company in Vapi, India | ERP & CRM Solutions",
+    description:
+      "WebCrafty Solution builds custom ERP, CRM, and web application solutions in Vapi, Gujarat. Streamline your business operations with our expert software development team.",
+  },
+  "video-editing": {
+    title: "Professional Video Editing Services in India | Reels, Ads & YouTube",
+    description:
+      "WebCrafty Solution provides professional video editing services for social media reels, YouTube content, and ad campaigns. Elevate your brand story with high-quality video production.",
+  },
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { service: string }
+}): Promise<Metadata> {
+  const seo = serviceSEO[params.service]
+  if (!seo) return {}
+  return {
+    title: seo.title,
+    description: seo.description,
+  }
+}
 
 // Define service data
 const servicesData = {

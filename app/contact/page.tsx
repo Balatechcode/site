@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -5,6 +6,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Contact WebCrafty Solution -- Get a Free Digital Marketing Quote | Vapi, Gujarat",
+  description:
+    "Contact WebCrafty Solution in Vapi, Gujarat for a free consultation on web development, digital marketing, SEO, or app development. Call +91 81549 54408 or fill our quick form!",
+}
 
 export default function ContactPage() {
   return (
@@ -14,7 +21,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">Contact Us</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Get In Touch With Us</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">Get In Touch -- Free Digital Marketing & Web Development Consultation in Vapi</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Have a question or ready to start your project? Reach out to us and we'll get back to you as soon as
               possible.
@@ -35,7 +42,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                 <p className="text-muted-foreground mb-4">For general inquiries and support</p>
                 <a href="mailto:info@webcraftysolution.com" className="text-primary hover:underline font-medium">
-                  Support@gmail.in
+                  info@webcraftysolution.com
                 </a>
               </CardContent>
             </Card>
@@ -60,7 +67,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
                 <p className="text-muted-foreground mb-4">Our office location</p>
-                <address className="not-italic text-primary">123 Business Ave, Suite 100</address>
+                <address className="not-italic text-primary">Vapi, Gujarat, India 396191</address>
               </CardContent>
             </Card>
           </div>
