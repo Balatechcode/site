@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "@/styles/globals.css"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Toaster } from "react-hot-toast"
@@ -16,12 +16,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.webcrafty.in"),
-  title: {
-    default: "WebCrafty Solution - Digital Marketing & Development Agency",
-    template: "%s | WebCrafty Solution",
-  },
+  title: "WebCrafty Solution - Digital Marketing & Development Agency",
   description:
-    "We help brands grow with expert web design, SEO, PPC, and social media marketing. Your digital success partner.",
+    "Full-service digital marketing and development agency specializing in website development, app development, digital marketing, graphics design etc.",
   keywords: [
     "web development",
     "app development",
@@ -58,8 +55,8 @@ export const metadata: Metadata = {
   // ✅ Twitter (X) card setup
   twitter: {
     card: "summary_large_image",
-    site: "@webcrafty_", // your verified handle
-    creator: "@webcrafty_",
+    site: "@AdvoraTECH63493", // your verified handle
+    creator: "@AdvoraTECH63493",
     title: "WebCrafty Solution - Digital Marketing & Development Agency",
     description:
       "Your digital growth partner for SEO, PPC, Social Media & Web Development. Let's elevate your brand together!",
