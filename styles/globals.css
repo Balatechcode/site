@@ -106,3 +106,9 @@ body {
 .google-review-frame::-webkit-scrollbar {
     display: none;
 }
+
+.taggbox{
+  width:100%;
+  height:100%;
+  overflow:auto;
+}

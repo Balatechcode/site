@@ -421,6 +421,37 @@ export default function HomePage() {
 </section>
 
 
+{/* Instagram Feed */}
+<section className="py-24 bg-muted/30">
+  <div className="mx-auto px-4">
+    <div className="text-center mb-12">
+      <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+              Instagram Feed
+      </Badge>
+      <h2 className="text-4xl font-bold">
+        Follow Us on Instagram
+      </h2>
+      <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+        Explore our latest projects, behind-the-scenes moments, and creative
+        updates.
+      </p>
+    </div>
+    <iframe
+      src="https://widget.taggbox.com/330451?website=1"
+      width="100%"
+      height="750"
+      loading="lazy"
+      allowFullScreen
+      className="w-full border-0"
+      style={{
+        border: "none",
+        display: "block",
+      }}
+    />
+  </div>
+</section>
+
+
       {/* Case Studies Highlight */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
