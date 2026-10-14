@@ -9,6 +9,7 @@ import { PageTransition } from "@/components/ui/page-transition"
 import Script from "next/script"
 import TopAlertBar from "@/components/TopAlertBar"
 import FloatingContactWidget from "@/components/FloatingContactWidget"
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -125,6 +126,7 @@ export default function RootLayout({
             },
           }}
         />
+        <Analytics />
       </body>
     </html>
   )
