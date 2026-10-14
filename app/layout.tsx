@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   ],
   generator: "Balakrishna kolla",
   authors: [{ name: "WebCrafty Solution", url: "https://www.webcrafty.in" }],
+  verification: {
+    other: {
+      "p:domain_verify": "1ca824f09a3492684c0edfb32e6dfbf2",
+    },
+  },
 
   // ✅ Facebook, LinkedIn, etc.
   openGraph: {
